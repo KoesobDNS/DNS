@@ -14,7 +14,7 @@ namespace DNS
                 Int,
                 Float,
                 Vector2,
-                Vecor3,
+                Vector3,
                 GameObject,
             }
         }

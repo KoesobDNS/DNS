@@ -8,15 +8,7 @@ namespace DNS
     {
         public class Define
         {
-            public enum KeyType
-            {
-                Bool,
-                Int,
-                Float,
-                Vector2,
-                Vector3,
-                GameObject,
-            }
+            
         }
     }
 }

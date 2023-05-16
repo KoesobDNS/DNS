@@ -8,9 +8,19 @@ namespace DNS
     {
         public class BlackboardKey : ScriptableObject
         {
-            public string Name;
-            public Define.KeyType Type;
-            public object Value;
+            public enum KeyType
+            {
+                Bool,
+                Int,
+                Float,
+                Vector2,
+                Vector3,
+                GameObject,
+            }
+
+            public string Name { get; set; }
+            public KeyType Type { get; set; }
+            public object Value { get; set; }
 
             public BlackboardKey Clone()
             {
@@ -24,22 +34,22 @@ namespace DNS
             {
                 switch(Type)
                 {
-                    case Define.KeyType.Bool:
+                    case KeyType.Bool:
                         Value = false;
                         break;
-                    case Define.KeyType.Int:
+                    case KeyType.Int:
                         Value = 0;
                         break;
-                    case Define.KeyType.Float:
+                    case KeyType.Float:
                         Value = 0.0f;
                         break;
-                    case Define.KeyType.Vector2:
+                    case KeyType.Vector2:
                         Value = Vector2.zero;
                         break;
-                    case Define.KeyType.Vector3:
+                    case KeyType.Vector3:
                         Value = Vector3.zero;
                         break;
-                    case Define.KeyType.GameObject:
+                    case KeyType.GameObject:
                         Value = null;
                         break;
                 }

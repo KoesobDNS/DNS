@@ -25,7 +25,7 @@ namespace DNS
                 return blackboard;
             }
 #if UNITY_EDITOR
-            public bool AddKeyValue(string name, Define.KeyType type)
+            public bool AddKeyValue(string name, BlackboardKey.KeyType type)
             {
                 foreach (var obj in keys)
                 {
@@ -38,22 +38,22 @@ namespace DNS
 
                 switch (type)
                 {
-                    case Define.KeyType.Bool:
+                    case BlackboardKey.KeyType.Bool:
                         key.Value = false;
                         break;
-                    case Define.KeyType.Int:
+                    case BlackboardKey.KeyType.Int:
                         key.Value = 0;
                         break;
-                    case Define.KeyType.Float:
+                    case BlackboardKey.KeyType.Float:
                         key.Value = 0.0f;
                         break;
-                    case Define.KeyType.Vector2:
+                    case BlackboardKey.KeyType.Vector2:
                         key.Value = Vector2.zero;
                         break;
-                    case Define.KeyType.Vector3:
+                    case BlackboardKey.KeyType.Vector3:
                         key.Value = Vector3.zero;
                         break;
-                    case Define.KeyType.GameObject:
+                    case BlackboardKey.KeyType.GameObject:
                         key.Value = new GameObject();
                         break;
                 }
